@@ -10,7 +10,10 @@ app = FastAPI(title="Resume Analyzer")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=[
+        "http://localhost:5173",
+        "https://ai-resume-analyzer-gbr7.vercel.app",  # you'll get this URL after Step 3 — come back and update it
+    ],
     allow_methods=["*"],
     allow_headers=["*"],
 )
